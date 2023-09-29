@@ -27,11 +27,7 @@ const server=app.listen(process.env.PORT,()=>{
     console.log(`Server is running at port ${process.env.PORT}`);
 })
 
-app.get('/favicon.ico', (req, res) => {
-    // Respond with an empty 204 status code
-    res.status(204).end();
-  });
-  
+
 const io=socket(server,{
     cors:{
         origin:"process.env.ORIGIN",
