@@ -17,7 +17,10 @@ app.get('/favicon.ico', (req, res) => {
     // Send a 200 status code
     res.status(200).end();
   });
-  
+  app.get('/', (req, res) => {
+    // Send a 200 status code
+    res.status(200).end();
+  });
 
 mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser:true,
