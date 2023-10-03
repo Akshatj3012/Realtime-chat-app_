@@ -13,6 +13,11 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth",userRoutes)
 app.use("/api/messages",messageRoute)
+app.get('/favicon.ico', (req, res) => {
+    // Send a 200 status code
+    res.status(200).end();
+  });
+  
 
 mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser:true,
